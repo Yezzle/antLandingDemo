@@ -30,15 +30,15 @@ class App extends React.Component {
 
   render() {
     return (
-        <div
-            className="templates-wrapper"
-            ref={(d) => {
-            this.dom = d;
-            }}
-        >
-            <Header />
-            {this.props.children || <Home />}
-        </div>
+      <div
+        className="templates-wrapper"
+        ref={(d) => {
+          this.dom = d;
+        }}
+      >
+        <Header />
+        {this.props.children || <Home {...this.props} />}
+      </div>
     );
   }
 }

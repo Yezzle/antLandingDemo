@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Router from 'react-router'
 import Button from 'antd/lib/button';
 
 class Home extends Component {
@@ -10,17 +9,18 @@ class Home extends Component {
         }
     }
 
-    componentDidMount () {
+    componentDidMount() {
 
     }
 
     onClick = () => {
+        this.props.router.push('/about')
         this.setState({
             isShow: !this.state.isShow
         })
     }
 
-    render () {
+    render() {
         return (
             <div>
                 <p className="buttons">
