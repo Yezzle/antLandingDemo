@@ -36,7 +36,7 @@ class App extends React.Component {
           this.dom = d;
         }}
       >
-        <Header />
+        <Header {...this.props} />
         {this.props.children || <Home {...this.props} />}
       </div>
     );
