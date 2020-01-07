@@ -22,11 +22,10 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <p className="buttons">
-                    <Button type="primary" onClick={this.onClick}>Switch</Button>
-                </p>
-                <p>我是home</p>
+            <div className="home">
+                <div className="first-banner">
+                    
+                </div>  
             </div>
         )
     }

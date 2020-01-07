@@ -1,47 +1,97 @@
 import React, { Component } from 'react'
-import { PageHeader, Menu, Dropdown, Button } from 'antd'
-import './header.less'
-import brand from './brand.png';
-const { Item } = Menu;
+import { PageHeader, Menu, Dropdown, Button, Icon, Input } from 'antd'
+
 export default class Header extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-
+            tabArr: [
+                {
+                    label: '首页',
+                    url: '/',
+                },
+                {
+                    label: '企业定制',
+                    url: '/customize',
+                },
+                {
+                    label: '关于柏商',
+                    url: '/about',
+                },
+                {
+                    label: '品牌运营',
+                    url: '/operation',
+                },
+                {
+                    label: '礼盒守信',
+                    url: '/box',
+                },
+                {
+                    label: '联系我们',
+                    url: '/contact',
+                }
+            ]
         }
     }
 
-    renderContent = () => {
-        switch (this.props.location.pathname) {
-            case '/': return <></>          //首页
-            case '/about': return <></>     //关于柏商
-            case '/contact': return <></>   //联系我们
-            case '/band': return <></>      //品牌运营
-            case '/custom': return <></>    //企业定制
-            case '/gift': return <></>      //礼盒守信
-        }
-    }
-
-    renderMenu = () => {
-        return <Menu mode="horizontal">
-            <Item>
-                <span className="header-menu-item">简</span>
-            </Item>
-            <Item>
-                <span className="header-menu-item">en</span>
-            </Item>
-        </Menu>
+    changePage = ({ key }) => {
+        this.props.router.push(key)
     }
 
     render() {
-        const menu = this.renderMenu();
+        const { tabArr } = this.state
+        const SearchIcon =  Icon.createFromIconfontCN({
+            scriptUrl: '//at.alicdn.com/t/font_1600924_k0suo5t1ljm.js',
+        })
+
+        const menu = (
+            <Menu
+                theme='dark'
+                onClick={this.changePage}
+            >
+                {
+                    tabArr.map((item, index) => (
+                        <Menu.Item key={item.url}>{item.label}</Menu.Item>
+                    ))
+                }
+            </Menu>
+        )
+        const DropdownMenu = () => (
+            <Dropdown key="nav" overlay={menu}>
+                <Icon
+                    type="menu"
+                    style={{
+                        color: '#fff',
+                        fontSize: '.2rem',
+                    }}
+                />
+            </Dropdown>
+        )
+        
         return (
             <PageHeader
-                className="layout-header"
-                extra={menu}
-                title={<img className="header-brand" src={brand}></img>}
-            >
-
+                style={{
+                    position: "absolute",
+                    left: 0,
+                    top: 0,
+                    padding: '0 .44rem',
+                    width: '100%',
+                    height: '.78rem',
+                    lineHeight: '.78rem',
+                    // border: '1px solid rgb(235, 237, 240)',
+                }}
+                title={[<img className="header-logo" src={require('@/assets/images/logo.png')} />]}
+                extra={[
+                    <SearchIcon
+                        type="iconsearch"
+                        style={{
+                            paddingRight: '1.2rem',
+                            color: '#fff',
+                            fontSize: '.2rem',
+                        }} />,
+                    <DropdownMenu />
+                ]}
+            >   
             </PageHeader>
         )
     }
