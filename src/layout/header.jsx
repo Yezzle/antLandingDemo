@@ -40,10 +40,26 @@ export default class Header extends Component {
 
     render() {
         const { tabArr } = this.state
-        const SearchIcon =  Icon.createFromIconfontCN({
-            scriptUrl: '//at.alicdn.com/t/font_1600924_k0suo5t1ljm.js',
+        const MyIcon =  Icon.createFromIconfontCN({
+            scriptUrl: '//at.alicdn.com/t/font_1600924_e23bddlkh6j.js',
         })
-
+        const Logo = () => (
+            <div
+                style={{
+                    fontSize: '.42rem',
+                }} 
+            >
+                <MyIcon 
+                    type="iconlogo"
+                />
+                <MyIcon 
+                    type="iconbrand-white"
+                    style={{
+                        paddingLeft: '.05rem',
+                    }} 
+                />
+            </div>
+        )
         const menu = (
             <Menu
                 theme='dark'
@@ -63,6 +79,7 @@ export default class Header extends Component {
                     style={{
                         color: '#fff',
                         fontSize: '.2rem',
+                        cursor: 'pointer',
                     }}
                 />
             </Dropdown>
@@ -80,9 +97,9 @@ export default class Header extends Component {
                     lineHeight: '.78rem',
                     // border: '1px solid rgb(235, 237, 240)',
                 }}
-                title={[<img className="header-logo" src={require('@/assets/images/logo.png')} />]}
+                title={[<Logo />]}
                 extra={[
-                    <SearchIcon
+                    <MyIcon
                         type="iconsearch"
                         style={{
                             paddingRight: '1.2rem',

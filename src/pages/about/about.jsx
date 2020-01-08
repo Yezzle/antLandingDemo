@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Button from 'antd/lib/button';
+import React, { Component } from 'react'
+import Button from 'antd/lib/button'
+import TextPlay from '@/components/textPlay'
 
 class About extends Component {
     constructor() {
@@ -23,10 +24,10 @@ class About extends Component {
     render() {
         return (
             <div className="queue-demo">
-                <p className="buttons">
+                {/* <p className="buttons">
                     <Button type="primary" onClick={this.onClick}>About</Button>
-                </p>
-                <p>我是About</p>
+                </p> */}
+                <TextPlay />
             </div>
         )
     }
