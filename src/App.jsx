@@ -7,6 +7,7 @@ import Header from '@/layout/header'
 import Home from '@/pages/home/home'
 
 import '@/styles/index.less';
+import Footer from './layout/footer';
 
 let isMobile;
 enquireScreen((b) => {
@@ -38,6 +39,7 @@ class App extends React.Component {
       >
         <Header {...this.props} />
         {this.props.children || <Home {...this.props} />}
+        <Footer></Footer>
       </div>
     );
   }
