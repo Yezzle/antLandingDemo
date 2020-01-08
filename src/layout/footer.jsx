@@ -1,11 +1,11 @@
 import React from 'react'
-import {Row, Col, Icon} from 'antd'
+import {Row, Col, Icon, Layout} from 'antd'
 
 const Footer = () => {
     const MyIcon =  Icon.createFromIconfontCN({
         scriptUrl: '//at.alicdn.com/t/font_1600924_e23bddlkh6j.js',
     })
-    return <Row className="footer">
+    return <Layout.Footer className="footer">
         <div className="footer-left-pannel" >
             <div className='footer-icon'>
                 <MyIcon 
@@ -27,8 +27,22 @@ const Footer = () => {
             <span className='footer-cooperation'>合作商家</span>
         </div>
         
-            <Row></Row>
-        </Row>
+            <Row style={{width: '1342px', height: '421px', float: 'right'}}>
+                <Row className='footer-icon'>
+                    <MyIcon type="iconqq" />
+                    <MyIcon 
+                        type="iconweixin-copy"
+                        style={{
+                            paddingLeft: '.05rem',
+                        }} />
+                    <MyIcon 
+                        type="iconweibo"
+                        style={{
+                            paddingLeft: '.05rem',
+                        }}  />
+                </Row>
+            </Row>
+        </Layout.Footer>
 }
 
 export default Footer;

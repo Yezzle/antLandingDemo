@@ -14,8 +14,8 @@ class RouterConfig extends React.Component {
                 justifyContent: 'center'
             }} tip="Loading..." />}>
                 <Router history={browserHistory}>
-                    <Route path='/' component={App}>
-                        <Route path='about' component={React.lazy(() => import('@/pages/about/about'))}></Route>
+                    <Route path='/' key="home" component={App}>
+                        <Route path='about' key="about" component={React.lazy(() => import('@/pages/about/about'))}></Route>
                     </Route>
                 </Router>
             </React.Suspense>

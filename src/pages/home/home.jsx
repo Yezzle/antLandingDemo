@@ -28,8 +28,8 @@ class Home extends Component {
                     style={{}}
                     content={
                         <>
-                            <p>每一罐都是充氮保鲜</p>
-                            <p>小罐保鲜，茶叶常温保鲜的重大突破</p>
+                            <div className="p">每一罐都是充氮保鲜</div>
+                            <div className="p">小罐保鲜，茶叶常温保鲜的重大突破</div>
                             <span>——柏商（湖北）商业管理有限公司</span>
                         </>}
                 />

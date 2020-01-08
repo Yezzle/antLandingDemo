@@ -50,9 +50,11 @@ export default class Header extends Component {
                 }} 
             >
                 <MyIcon 
+                    key="logo"
                     type="iconlogo"
                 />
                 <MyIcon 
+                    key="logo-brand"
                     className="header-brand-fit"
                     type="iconbrand-white"
                     style={{
@@ -98,16 +100,17 @@ export default class Header extends Component {
                     lineHeight: '.78rem',
                     // border: '1px solid rgb(235, 237, 240)',
                 }}
-                title={[<Logo />]}
+                title={[<Logo key="logo"/>]}
                 extra={[
-                    <MyIcon
+                    <MyIcon 
+                        key="iconsearch"
                         type="iconsearch"
                         style={{
                             paddingRight: '1.2rem',
                             color: '#fff',
                             fontSize: '.2rem',
                         }} />,
-                    <DropdownMenu />
+                    <DropdownMenu key="dropdown"/>
                 ]}
             >   
             </PageHeader>

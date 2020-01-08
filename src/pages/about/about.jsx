@@ -31,8 +31,8 @@ class About extends Component {
                     content={
                         <>  
                             <span><TextPlay>联系我们</TextPlay></span>
-                            <p><TextPlay>柏商商业</TextPlay></p>
-                            <p><TextPlay>认识你很高兴，欢迎联系！</TextPlay></p>
+                            <div className="p"><TextPlay>柏商商业</TextPlay></div>{/** p标签下面不可以有div标签 */}
+                            <div className="p"><TextPlay>认识你很高兴，欢迎联系！</TextPlay></div>
                             <span><TextPlay>——柏商（湖北）商业管理有限公司</TextPlay></span>
                         </>}
                 />
