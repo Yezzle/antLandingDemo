@@ -53,6 +53,7 @@ export default class Header extends Component {
                     type="iconlogo"
                 />
                 <MyIcon 
+                    className="header-brand-fit"
                     type="iconbrand-white"
                     style={{
                         paddingLeft: '.05rem',

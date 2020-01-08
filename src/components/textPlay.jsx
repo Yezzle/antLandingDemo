@@ -1,18 +1,7 @@
 import React, { Component } from 'react'
 import Texty from 'rc-texty'
-
-class TextPlay extends Component {
-
-
-
-    render() {
-        return(
-            <Texty>
-                456456456456
-            </Texty>
-        )
-    }
+const TextPlay = (props) => {
+    return <Texty>{props.children}</Texty>
 }
-
 export default TextPlay
 
