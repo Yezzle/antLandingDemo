@@ -1,18 +1,15 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-export const Banner = (props) => {
-    const {content, style, bannerClass, ...otherProps} = props;
-    return <div 
-            className={`first-banner ${bannerClass}`} >
-        <div className="banner-content">
-            <div className="banner-title"
-                style={{
-                    paddingTop: '3.75rem',
-                    ...style
-                }}
-            >
-                {content}
+export class Banner extends Component {
+    render() {
+        const { content, style, bannerClass, myRef, ...otherProps} = this.props;
+        return (
+            <div ref={myRef} className={`first-banner ${bannerClass}`} >
+                <div className="banner-content">
+                    {content}
+                </div>
             </div>
-        </div>
-    </div>  
+        )  
+    }
+    
 }
