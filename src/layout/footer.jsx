@@ -26,8 +26,7 @@ const Footer = () => {
             <hr className='footer-hr1'></hr>
             <span className='footer-cooperation'>合作商家</span>
         </div>
-        
-            <Row style={{width: '1342px', height: '421px', float: 'right'}}>
+            <Row style={{width: '13.42rem', height: '4.21rem', float: 'right'}}>
                 <Row className='footer-icon'>
                     <MyIcon type="iconqq" />
                     <MyIcon 
