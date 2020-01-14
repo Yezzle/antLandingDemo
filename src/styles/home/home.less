@@ -40,9 +40,12 @@
                     }
                 }
                 &:nth-child(2) {
+                    position: relative;
                     img {
-                        padding-top: .5rem;
-                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 6rem;
                     }
                     .right-banner-b {
                         text-align: center;
@@ -79,6 +82,9 @@
             padding-top: .76rem;
             p {
                 text-align: center;
+                > img {
+                    width: 9.3rem;
+                }
             }
             > ul {
                 display: flex;

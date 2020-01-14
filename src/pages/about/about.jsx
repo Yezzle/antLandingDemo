@@ -121,7 +121,7 @@ class About extends Component {
                     bannerClass={"about-banner-b"}
                     style={{}}
                     content={
-                        <div className="banner-content-b">
+                        <div className="about-banner-content-b">
                             <img src={require('../../assets/images/about/sticker_0.png')} alt=""/>
                             <img src={require('../../assets/images/about/sticker_1.png')} alt="" />
                             <div className="b-title"><TextPlay isShow>商业管理、品牌运营、企业架构管理、广告营销策划品牌推广、产品运营</TextPlay></div>
@@ -153,7 +153,7 @@ class About extends Component {
                     bannerClass={"about-banner-c"}
                     style={{}}
                     content={
-                        <div className="banner-content-c">
+                        <div className="about-banner-content-c">
                             <div className="c-title"><TextPlay isShow>北京（总部）</TextPlay></div>
                             <p>
                                 <img src={require('../../assets/images/about/sticker_3.png')} alt="" />
