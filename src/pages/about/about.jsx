@@ -24,6 +24,30 @@ class About extends Component {
     componentDidMount () {
         window.addEventListener('scroll', this.throttleScrollNav, true)
         window.addEventListener('scroll', this.throttleScroll, true)
+        const BMap = window.BMap
+        var map = new BMap.Map("map-container")
+        // 创建地图实例  
+        var point = new BMap.Point(116.47943,39.929332)
+        // 创建点坐标  
+        map.centerAndZoom(point, 18)
+        let marker = new BMap.Marker(point)
+        let label = new BMap.Label('柏商商业管理', {position: point, offset: new BMap.Size(-65,-50)})
+        window.label = label
+        label.setStyle({
+            'font-size': '24px',
+            'font-weight': '500',
+            'line-height': '20px',
+            'font-family': 'Source Han Sans CN',
+            'border-color': 'white',
+            'padding': '11px',
+            'box-shadow': '#ccc 1px 2px'
+        })
+        label.setTitle('柏商商业管理')
+        marker.setLabel(label)
+        marker.setTitle('柏商商业管理')
+        marker.setTop(true)
+        map.addOverlay(marker)
+        // map.addOverlay(label)
     }
 
     componentWillUnmount () {
@@ -155,9 +179,10 @@ class About extends Component {
                     content={
                         <div className="about-banner-content-c">
                             <div className="c-title"><TextPlay isShow>北京（总部）</TextPlay></div>
-                            <p>
+                            <p style={{display: 'inline-block'}}>
                                 <img src={require('../../assets/images/about/sticker_3.png')} alt="" />
                             </p>
+                            <div id='map-container' className="map-container"></div>
                             <ul className="clearfix">
                                 <li>
                                     <div><TextPlay isShow={isShowC}>地址</TextPlay></div>
