@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Banner } from '@/components/banner'
 import TextPlay from '@/components/textPlay'
-import SideNav from '@/components/sideNav';
+import SideNav from '@/components/sideNav'
 import { throttle } from '@/util/utils'
 
 class Home extends Component {
@@ -99,7 +99,6 @@ class Home extends Component {
         console.log(index)
         const element = index == 0 ? this.bannerContentB.current : this.bannerContentC.current
         element.scrollIntoView({block: "start", inline: "nearest", behavior: 'smooth' })
-    //     element && element.scrollIntoView({ behavior: 'smooth' })
     } 
 
     render() {
@@ -210,7 +209,8 @@ class Home extends Component {
                                 <div className="right-banner-b"><TextPlay isShow={isShowBr} mode="sync">柏商为互联网行业及新零售业的商业，品牌运营，企业架构管理，广告策划品牌推广及产品运营提供更立体的全方位服务。致力于成为全国新零售行业更专业可依赖的多元化运营服务提供商．</TextPlay></div>
                                 <div className="right-banner-b"><img src={require('../../assets/images/home/sticker_1.png')} alt=""/></div>
                             </div>
-                        </div>}
+                        </div>
+                    }
                 />
                 <Banner
                     myRef={this.bannerContentC}
@@ -233,7 +233,8 @@ class Home extends Component {
                                     <div className="bottom-banner-c"><TextPlay isShow={isShowC} delay={500}>手信 · 茶礼，联合国内多家顶尖设计院校及知名国瓷生产企业．精选祁门红茶、武夷岩茶、政和白茶、普洱熟茶．与景德镇影青瓷组合成礼。</TextPlay></div>
                                 </li>
                             </ul>
-                        </div>}
+                        </div>
+                    }
                 />
             </div>
         )
