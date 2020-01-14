@@ -205,6 +205,15 @@ template {
     display: none;
 }
 
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
 @media screen and (min-width: 1300px) and (max-width: 1400px) {
     html{ font-size: 546.875%;} 
 } 

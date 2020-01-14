@@ -41,7 +41,7 @@ export default class Header extends Component {
     render() {
         const { tabArr } = this.state
         const MyIcon =  Icon.createFromIconfontCN({
-            scriptUrl: '//at.alicdn.com/t/font_1600924_e23bddlkh6j.js',
+            scriptUrl: '//at.alicdn.com/t/font_1600924_58ld507nkdk.js',
         })
         const Logo = () => (
             <div
