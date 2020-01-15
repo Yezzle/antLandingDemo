@@ -20,6 +20,7 @@ class RouterConfig extends React.Component {
                         <Route path='box' key="box" component={React.lazy(() => import('@/pages/box/box'))}></Route>
                         <Route path='contact' key="contact" component={React.lazy(() => import('@/pages/contact/contact'))}></Route>
                         <Route path='customize' key="customize" component={React.lazy(() => import('@/pages/customize/customize'))}></Route>
+                        <Route path='admin' key="admin" component={React.lazy(() => import("@/pages/admin"))}></Route>
                     </Route>
                 </Router>
             </React.Suspense>
