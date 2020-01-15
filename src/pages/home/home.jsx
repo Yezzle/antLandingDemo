@@ -87,7 +87,7 @@ class Home extends Component {
                 isShowBl: true
             })
         }
-        if (document.body.scrollTop > 1600 && !isEnd) {
+        if (document.body.scrollTop > 1400 && !isEnd) {
             this.setState({
                 isShowC: true,
                 isEnd: true

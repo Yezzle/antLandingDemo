@@ -76,7 +76,7 @@ export default class Header extends Component {
             </Menu>
         )
         const DropdownMenu = () => (
-            <Dropdown key="nav" overlay={menu}>
+            <Dropdown key="nav" overlay={menu} placement="bottomRight">
                 <Icon
                     type="menu"
                     style={{
