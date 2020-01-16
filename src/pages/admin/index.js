@@ -46,14 +46,13 @@ class index extends Component {
     }
 
     exportList = () => {
-        return exportList().then(res =>{
-            let blob = new Blob([res.data]);
-            let a = document.createElement('a')
-            a.download = '导出数据.xlsx'
-            a.href = window.URL.createObjectURL(blob);
-            a.click();
-        }
-        )
+        // return exportList().then(res =>{
+        //     // let blob = new Blob([res.data]);
+        //     let a = document.createElement('a')
+        //     a.download = '导出数据.xlsx'
+        //     a.href = 'http://localhost:8888/public/output.xlsx'
+        //     a.click();
+        // })
     }
 
     render() {
@@ -92,7 +91,7 @@ class index extends Component {
         return <Layout className="admin-main">
             <Content className="admin-content">
                 <Row>
-                    <Button onClick={this.exportList} type="primary" style={{ marginBottom: 16 }}>导出全部</Button>
+                    <Button onClick={this.exportList} type="primary" disabled={true } style={{ marginBottom: 16 }}>导出全部</Button>
                      <Popconfirm onConfirm={this.confirmRemoveAll} title="确定要删除吗？删除后将无法恢复哦" okText="确定" cancelText="取消"> <Button type="danger" style={{ marginBottom: 16 }}>删除全部</Button></Popconfirm>  
                 </Row>
                 <Table
