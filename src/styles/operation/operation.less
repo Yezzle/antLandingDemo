@@ -1,0 +1,136 @@
+.operation{
+    .operation-banner-a {
+        height: 8.6rem;
+        background-image: url('../../assets/images/operation/banner_0.png');
+        background-repeat: no-repeat;
+    }
+    .operation-banner-b {
+        height: 9.7rem;
+        background-image: url('../../assets/images/customize/banner_2.png');
+        background-repeat: no-repeat;
+        .operation-banner-content-b {
+            padding: 1rem 3.18rem 0;
+            .b-title {
+                height: .5rem;
+                font-size: .36rem;
+                font-weight: bold;
+                color: #000;
+            }
+            .b-title-s {
+                box-sizing: border-box;
+                height: .46rem;
+                padding-top: .24rem;
+                font-size: .16rem;
+                color: #333;
+            }
+            .b-grid {
+                margin-top: .66rem;
+                display: grid;
+                grid-template-columns: repeat(4, 2.78rem);
+                grid-template-rows: repeat(2, 2.78rem);
+                grid-gap: .3rem;
+                .item {
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    cursor: pointer;
+                    .item-text {
+                        position: absolute;
+                        bottom: .25rem;
+                        left: .34rem;
+                        > div {
+                            &:nth-child(1) {
+                                font-size: .24rem;
+                                font-weight: bold;
+                            }
+                            &:nth-child(2) {
+                                padding-top: 0.14rem;
+                                font-size: .16rem;
+                            }
+                        }
+                    }
+                }
+                .item-0 {
+                    background-image: url('../../assets/images/operation/sticker_0.png');
+                }
+                .item-1 {
+                    background-image: url('../../assets/images/operation/sticker_1.png');
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                }
+                .item-2 {
+                    background-image: url('../../assets/images/operation/sticker_5.png');
+                    grid-column-start: 4;
+                    grid-column-end: 5;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+                .item-3 {
+                    background-image: url('../../assets/images/operation/sticker_2.png');
+                }
+                .item-4 {
+                    background-image: url('../../assets/images/operation/sticker_3.png');
+                }
+                .item-5 {
+                    background-image: url('../../assets/images/operation/sticker_4.png');
+                }
+            }
+        }
+    }
+    .operation-banner-c {
+        height: 20.28rem;
+        background-image: url('../../assets/images/operation/banner_1.png');
+        background-repeat: no-repeat;
+        color: #1c2e30;
+        .operation-banner-content-c {
+            padding: 0.6rem 3.18rem 0;
+            > ul {
+                > li {
+                    position: relative;
+                    margin-top: .6rem;
+                    height: 4rem;
+                    > img {
+                        position: absolute;
+                        top: 0;
+                        height: 4rem;
+                    }
+                    > div {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        padding-left: .78rem;
+                        width: 5.05rem;
+                        .c-title {
+                            font-size: .6rem;
+                            font-weight: bold;
+                            color: #fff;
+                        }
+                        .c-text {
+                            padding-top: .36rem;
+                            line-height: 0.4rem;
+                            font-size: .22rem;
+                            color: #a6b9bb; 
+                        }
+                    }
+                    &:nth-of-type(odd) {
+                        > img {
+                            left: 0;
+                        }
+                        > div {
+                            right: 0;
+                        }
+                    }
+                    &:nth-of-type(even) {
+                        > img {
+                            right: 0;
+                        }
+                        > div {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
