@@ -4,6 +4,7 @@ import { Banner } from '@/components/banner'
 import SideNav from '@/components/sideNav'
 import { throttle } from '@/util/utils'
 import { Message } from 'antd'
+import { postAddCommit } from '../../util/axios'
 
 class Contact extends Component {
     constructor() {
@@ -141,6 +142,12 @@ class Contact extends Component {
             Message.warning('请输入正确的邮箱地址')
             return
         }
+
+        postAddCommit({name, email, message}).then(res => {
+            if(res.status == 200){
+                Message.info('留言成功！')
+            }
+        })
     }
 
     render () {
