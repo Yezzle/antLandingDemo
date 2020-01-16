@@ -186,35 +186,35 @@ class Customize extends Component {
                         <div className="customize-banner-content-b">
                             <ul>
                                 <li>
-                                    <img src={require('../../assets/images/customize/sticker_0.png')} alt=""/>
+                                    <img className="transform" src={require('../../assets/images/customize/sticker_0.png')} alt=""/>
                                     <div>
                                         <div className="b-title"><TextPlay isShow={isShowBt}>茶叶</TextPlay></div>
                                         <div className="b-text"><TextPlay isShow={isShowBt}>专业产品顾问全链条式品质把关，精挑细作，叶叶严选</TextPlay></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <img src={require('../../assets/images/customize/sticker_1.png')} alt=""/>
+                                    <img className="transform" src={require('../../assets/images/customize/sticker_1.png')} alt=""/>
                                     <div>
                                         <div className="b-title"><TextPlay isShow={isShowBt}>景德镇陶瓷</TextPlay></div>
                                         <div className="b-text"><TextPlay isShow={isShowBt}>“瓷都”窑制，匠心打造</TextPlay></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <img src={require('../../assets/images/customize/sticker_2.png')} alt=""/>
+                                    <img className="transform" src={require('../../assets/images/customize/sticker_2.png')} alt=""/>
                                     <div>
                                         <div className="b-title"><TextPlay isShow={isShowBc}>党参</TextPlay></div>
                                         <div className="b-text"><TextPlay isShow={isShowBc}>严选生长于气候凉爽、阳光充足的甘肃党参，富有糖分，入口鲜甜十足，甘香可口</TextPlay></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <img src={require('../../assets/images/customize/sticker_3.png')} alt=""/>
+                                    <img className="transform" src={require('../../assets/images/customize/sticker_3.png')} alt=""/>
                                     <div>
                                         <div className="b-title"><TextPlay isShow={isShowBb}>黑枸杞</TextPlay></div>
                                         <div className="b-text"><TextPlay isShow={isShowBb}>精选青海柴达木盆地诺木洪地区黑枸杞，花青素含量极高,富含蛋白质、枸杞多糖、氨基酸、维生素、矿物质、微量元素等多种营养成分</TextPlay></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <img src={require('../../assets/images/customize/sticker_4.png')} alt=""/>
+                                    <img className="transform" src={require('../../assets/images/customize/sticker_4.png')} alt=""/>
                                     <div>
                                         <div className="b-title"><TextPlay isShow={isShowBb}>坚果熟食</TextPlay></div>
                                         <div className="b-text"><TextPlay isShow={isShowBb}>穿越云南古寨、长白山原始森林、美国海岸线，巴基斯坦、澳洲热带雨林等8个全世界最美的坚果原产地，采集、捡拾，挖掘出自然馈赠的果实，只为将最好的坚果带给你。</TextPlay></div>

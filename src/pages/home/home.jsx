@@ -195,7 +195,7 @@ class Home extends Component {
                     content={
                         <div className="banner-content-b">
                             <div>
-                                <p><img src={require('../../assets/images/home/sticker_0.png')} alt=""/></p>
+                                <p><img className="transform" src={require('../../assets/images/home/sticker_0.png')} alt=""/></p>
                                 <p></p>
                                 <ul>
                                     <li><TextPlay isShow={isShowBl}>我们始终以“服务客户，成就自我”为宗旨</TextPlay></li>
@@ -207,7 +207,7 @@ class Home extends Component {
                                 <div className="right-banner-b"><TextPlay isShow={isShowBr}>原产地特级茶青</TextPlay></div>
                                 <div className="right-banner-b"><TextPlay isShow={isShowBr}>柏商（湖北）商业管理</TextPlay></div>
                                 <div className="right-banner-b"><TextPlay isShow={isShowBr} mode="sync">柏商为互联网行业及新零售业的商业，品牌运营，企业架构管理，广告策划品牌推广及产品运营提供更立体的全方位服务。致力于成为全国新零售行业更专业可依赖的多元化运营服务提供商．</TextPlay></div>
-                                <div className="right-banner-b"><img src={require('../../assets/images/home/sticker_1.png')} alt=""/></div>
+                                <div className="right-banner-b"><img className="transform" src={require('../../assets/images/home/sticker_1.png')} alt=""/></div>
                             </div>
                         </div>
                     }
