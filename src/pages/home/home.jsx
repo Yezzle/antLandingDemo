@@ -26,6 +26,13 @@ class Home extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.throttleScrollNav, true)
         window.addEventListener('scroll', this.throttleScroll, true)
+        window.pakshang = () => {
+            window['admin'] = (key) => {
+                if(key == 'pakshang'){
+                    this.props.router.push('admin')
+                }
+            }
+        }
     }
 
     componentWillUnmount() {

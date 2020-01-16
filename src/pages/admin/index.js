@@ -31,7 +31,7 @@ class index extends Component {
     }
 
     confirmRemoveAll = () => {
-        return this.doDelete([this.state.datas.map(d => d._id)]).then(this.updateList)
+        return this.doDelete(this.state.datas.map(d => d._id)).then(this.updateList)
     }
 
     doDelete = (ids) => {
@@ -46,20 +46,22 @@ class index extends Component {
     }
 
     exportList = () => {
-        // return exportList().then(res =>{
-        //     // let blob = new Blob([res.data]);
-        //     let a = document.createElement('a')
-        //     a.download = '导出数据.xlsx'
-        //     a.href = 'http://localhost:8888/public/output.xlsx'
-        //     a.click();
-        // })
+        return exportList().then(res =>{
+            console.log(res)
+            // // let blob = new Blob([res.data]);
+            // let a = document.createElement('a')
+            // a.download = '导出数据.xlsx'
+            // a.href = 'http://localhost:8888/public/output.xlsx'
+            // a.click();
+            message.info('导出成功!，需要手动从服务器拷贝')
+        })
     }
 
     render() {
         const colum = [{
             title: '序号',
             key: 'index',
-            width: 80,
+            width: 60,
             render: (v, record, i)=>{
                 return <span>{i+1}</span>
             }
@@ -67,16 +69,27 @@ class index extends Component {
             title: '姓名',
             dataIndex: 'name',
             key: 'name',
-            width: 200
+            width: 150
         },{
-            title: '联系方式',
+            title: '电话',
+            dataIndex: 'phone',
+            key: 'phone',
+            width: 150
+        },{
+            title: '邮箱',
             dataIndex: 'email',
             key: 'email',
-            width: 150
+            width: 200
         },{
             title: '留言内容',
             dataIndex: 'message',
             key: 'message',
+        },{
+            title: '创建时间',
+            align: 'center',
+            dataIndex: 'time',
+            key: 'time',
+            width: 200
         },{
             title: '操作',
             key:'operation',

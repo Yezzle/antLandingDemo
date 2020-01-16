@@ -4,6 +4,8 @@ import { Banner } from '@/components/banner'
 import SideNav from '@/components/sideNav'
 import { throttle } from '@/util/utils'
 import { Message, Icon } from 'antd'
+import { postAddCommit } from '../../util/axios'
+import moment from 'moment'
 
 class Customize extends Component {
     constructor() {
@@ -146,6 +148,12 @@ class Customize extends Component {
             Message.warning('超过最大字数')
             return
         }
+        let time = moment().format("YYYY-MM-DD HH:mm:ss")
+        postAddCommit({name, phone, email, time, message}).then(res => {
+            if(res.status == 200){
+                Message.info('留言成功！')
+            }
+        })
     }
 
     render () {
