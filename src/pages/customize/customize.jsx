@@ -59,7 +59,7 @@ class Customize extends Component {
             })
             return
         }
-        if (cTop < 10 && cTop > -1335) {
+        if (cTop < 0 && cTop > -1335) {
             this.setState({
                 isShowNav: true,
                 type: 'dark',

@@ -1,0 +1,88 @@
+.box{
+    .box-banner-a {
+        height: 8.6rem;
+        background-image: url('../../assets/images/box/banner_0.png');
+        background-repeat: no-repeat;
+    }
+    .box-banner-b {
+        height: 9.7rem;
+        background-image: url('../../assets/images/box/banner_1.png');
+        background-repeat: no-repeat;
+        color: #1c2e30;
+        .box-banner-content-b {
+            position: relative;
+            height: 9.06rem;
+            padding: 1.26rem 3.18rem 0;
+            > img {
+                position: absolute;
+                right: 3.18rem;
+                bottom: .0;
+                height: 4rem;
+            }
+            .b-title {
+                position: relative;
+                max-width: 10.75rem;
+                line-height: .9rem;
+                font-size: .6rem;
+                font-weight: bold;
+                z-index: 99;
+            }
+            .b-title-s {
+                width: 9.22rem;
+                padding: .6rem 0 1.2rem;
+                font-size: .24rem;
+                line-height: .48rem;
+            }
+            .b-title-s1 {    
+                padding-top: .3rem;
+                font-size: .36rem;
+            }
+            .b-title-s2 {
+                padding-top: .16rem;
+                font-size: .3rem;
+                color: #6B7F81;
+            }
+        }
+    }
+    .box-banner-c {
+        height: 12.55rem;
+        background-image: url('../../assets/images/box/banner_2.png');
+        background-repeat: no-repeat;
+        .box-banner-content-c {
+            padding: .85rem 3.1rem 0;
+            .c-title {
+                font-size: .3rem;
+                font-weight: bold;
+            }
+            > p {
+                display: inline-block;
+                > img {
+                    height: 4rem;
+                }
+            }
+            > ul {
+                display: flex;
+                padding-top: .3rem;
+                li {
+                    height: .9rem;
+                    &:nth-of-type(1) {
+                        flex: 2;
+                    }
+                    &:nth-of-type(2) {
+                        flex: 1;
+                    }
+                    > div {
+                        &:nth-child(1) {
+                            font-size: .3rem;
+                            font-weight: bold;
+                        }
+                        &:nth-child(2) {
+                            padding-top: .2rem;
+                            font-size: .28rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

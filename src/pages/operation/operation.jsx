@@ -3,7 +3,6 @@ import TextPlay from '@/components/textPlay'
 import { Banner } from '@/components/banner'
 import SideNav from '@/components/sideNav'
 import { throttle } from '@/util/utils'
-import { Message, Icon } from 'antd'
 
 class Operation extends Component {
     constructor() {
@@ -55,7 +54,7 @@ class Operation extends Component {
             })
             return
         }
-        if (cTop < 10 && cTop > -535) {
+        if (cTop < 10 && cTop > -1335) {
             this.setState({
                 isShowNav: true,
                 type: 'light',

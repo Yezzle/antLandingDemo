@@ -23,7 +23,7 @@ export default class Header extends Component {
                     url: '/operation',
                 },
                 {
-                    label: '礼盒守信',
+                    label: '礼盒手信',
                     url: '/box',
                 },
                 {

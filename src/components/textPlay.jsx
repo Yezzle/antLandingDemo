@@ -12,6 +12,7 @@ const TextPlay = (props) => {
             mode={props.mode || 'smooth'}
             delay={props.delay || 0}
             duration={props.duration || 400}
+            interval={props.interval || 50}
         >{str}</Texty> : ''
 }
 export default TextPlay
