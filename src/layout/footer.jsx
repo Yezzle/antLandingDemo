@@ -42,19 +42,19 @@ const Footer = () => {
             <div className="footer-right-info clearfix">
                 <div>
                     <p>联系电话</p>
-                    <p>4110- 6666 - 8888</p>
+                    <p>027- 6552 - 4496</p>
                 </div>
                 <div>
                     <p>我的地址 </p>
-                    <p>北京市城东区城东路与商城路交叉口100号</p>
+                    <p>武汉是江夏区光谷芯中心D4区3栋</p>
                 </div>
                 <div>
                     <p>工作时间</p>
-                    <p>8:00~23:00（周一至周日）</p>
+                    <p>9:00~18:00（周一至周日）</p>
                 </div>
                 <div>
                     <p>公司邮箱</p>
-                    <p>1848378244@163.com</p>
+                    <p>songning@pakshang.com</p>
                 </div>
             </div>
             <ul className="footer-right-tab clearfix">
