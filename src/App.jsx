@@ -24,16 +24,14 @@ class App extends React.Component {
 
   componentDidMount() {
     // 适配手机屏幕;
+    let w = window.innerWidth, h = window.innerHeight
+    let minWidth = 1300;
+    let scale = Math.min( w/minWidth, 1.0 )
+    document.children[0].style['font-size'] = `${80*Math.max(scale,1.0)}px`
+    document.body.setAttribute('style', `min-width: ${w/scale}px; transform: scale(${scale}); transform-origin: 0 0; height: ${h/scale}px`)
+        
     enquireScreen((b) => {
       this.setState({ isMobile: !!b });
-      if(b){
-        let w = window.innerWidth, h = window.innerHeight
-        let minWidth = 1300;
-        let scale = Math.min( w/minWidth, 1.0 )
-        document.children[0].style['font-size'] = `${80*Math.max(scale,1.0)}px`
-        document.body.setAttribute('style', `min-width: ${w/scale}px; transform: scale(${scale}); transform-origin: 0 0; height: ${h/scale}px`)
-        
-      }
     });
   }
 
