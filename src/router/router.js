@@ -12,7 +12,7 @@ class RouterConfig extends React.Component {
                 alignItems: 'center',
                 alignContent: 'center',
                 justifyContent: 'center'
-            }} tip="Loading..." />}>
+            }} tip="" />}>
                 <Router history={browserHistory}>
                     <Route path='/' key="home" component={App}>
                         <Route path='about' key="about" component={React.lazy(() => import('@/pages/about/about'))}></Route>

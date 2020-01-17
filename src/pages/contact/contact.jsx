@@ -32,9 +32,9 @@ class Contact extends Component {
         const BMap = window.BMap
         var map = new BMap.Map("map-container")
         // 创建地图实例  
-        var point = new BMap.Point(116.47943, 39.929332)
+        var point = new BMap.Point(114.460804, 30.424836)
         // 创建点坐标  
-        map.centerAndZoom(point, 18)
+        map.centerAndZoom(point, 15)
         let marker = new BMap.Marker(point)
         let label = new BMap.Label('柏商商业管理', { position: point, offset: new BMap.Size(-65, -50) })
         window.label = label
@@ -227,7 +227,7 @@ class Contact extends Component {
                     style={{}}
                     content={
                         <div className="contact-banner-content-c">
-                            <div className="c-title"><TextPlay isShow>北京（总部）</TextPlay></div>
+                            <div className="c-title"><TextPlay isShow>武汉（分部）</TextPlay></div>
                             <p style={{ display: 'inline-block' }}>
                                 <img src={require('../../assets/images/about/sticker_3.png')} alt="" />
                             </p>
@@ -235,11 +235,11 @@ class Contact extends Component {
                             <ul className="clearfix">
                                 <li>
                                     <div><TextPlay isShow={isShowC}>地址</TextPlay></div>
-                                    <div><TextPlay isShow={isShowC}>北京市朝阳区光华路199号  1205</TextPlay></div>
+                                    <div><TextPlay isShow={isShowC}>武汉市江夏区光谷芯中心D4区3栋</TextPlay></div>
                                 </li>
                                 <li>
                                     <div><TextPlay isShow={isShowC}>电话</TextPlay></div>
-                                    <div><TextPlay isShow={isShowC}>0371-6666-8888</TextPlay></div>
+                                    <div><TextPlay isShow={isShowC}>027-6552-4496</TextPlay></div>
                                 </li>
                             </ul>
                         </div>
